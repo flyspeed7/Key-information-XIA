@@ -92,7 +92,7 @@ GetKey.MouseButton1Click:Connect(function()
 end)
 
 local function validateKey(key)
-    return key == "XiaoLing-plm398"
+    return key == "plm398"
 end
 
 CheckKey.MouseButton1Click:Connect(function()
