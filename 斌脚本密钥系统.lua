@@ -103,12 +103,13 @@ CheckKey.MouseButton1Click:Connect(function()
         wait(1)
         ScreenGui:Destroy()
 print("执行冬凌中心")
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/dong-ling-zhon-xin-DLZX.Lua/refs/heads/main/Main-%E5%86%AC%E5%87%8C%E4%B8%AD%E5%BF%83.Lua"))()
+        local link = "https://raw.githubusercontent.com/flyspeed7/Raw.DONG_LING_ZHON_XIN_DLZX/refs/heads/main/Main-%E5%86%AC%E5%87%8C%E4%B8%AD%E5%BF%83.Lua"
+loadstring(game:HttpGet(link))()
     else
         TextBox.PlaceholderText = "key out"
         TextBox.Text = ""
         wait(1)
-        TextBox.PlaceholderText = "kato"
+        TextBox.PlaceholderText = "卡密输入..."
         TextBox.Text = ""
     end
 end)
