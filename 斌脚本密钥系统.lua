@@ -77,10 +77,10 @@ GetKeyCorner.Parent = GetKey
 local CheckKey = Instance.new("TextButton")
 CheckKey.Size = UDim2.new(0.35, 0, 0.15, 0)
 CheckKey.Position = UDim2.new(0.55, 0, 0.7, 0)
-CheckKey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+CheckKey.BackgroundColor3 = Color3.fromRGB(41, 255, 0)
 CheckKey.Text = "确认密钥"
 CheckKey.TextSize = 18
-CheckKey.TextColor3 = Color3.fromRGB(41, 255, 0)
+CheckKey.TextColor3 = Color3.fromRGB(25, 25, 25)
 CheckKey.Parent = Frame
 
 local CheckKeyCorner = Instance.new("UICorner")
