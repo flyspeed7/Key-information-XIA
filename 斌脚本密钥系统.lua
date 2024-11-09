@@ -23,7 +23,7 @@ Close.Position = UDim2.new(1, -40, 0, 0)
 Close.BackgroundTransparency = 1
 Close.Text = "X"
 Close.TextScaled = true
-Close.TextColor3 = Color3.fromRGB(150, 150, 150)
+Close.TextColor3 = Color3.fromRGB(255, 0, 0)
 Close.Parent = Frame
 Close.MouseButton1Click:Connect(function()
    ScreenGui:Destroy()
@@ -34,7 +34,7 @@ Title.Size = UDim2.new(1, 0, 0, 30)
 Title.Position = UDim2.new(0, 0, 0.05, 0)
 Title.Text = "新-冬凌中心"
 Title.TextSize = 18
-Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextColor3 = Color3.fromRGB(0, 203, 255)
 Title.BackgroundTransparency = 1
 Title.Parent = Frame
 
@@ -64,10 +64,10 @@ TextBoxCorner.Parent = TextBox
 local GetKey = Instance.new("TextButton")
 GetKey.Size = UDim2.new(0.35, 0, 0.15, 0)
 GetKey.Position = UDim2.new(0.1, 0, 0.7, 0)
-GetKey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+GetKey.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
 GetKey.Text = "获取卡密"
 GetKey.TextSize = 18
-GetKey.TextColor3 = Color3.fromRGB(150, 150, 150)
+GetKey.TextColor3 = Color3.fromRGB(255, 176, 0)
 GetKey.Parent = Frame
 
 local GetKeyCorner = Instance.new("UICorner")
@@ -80,7 +80,7 @@ CheckKey.Position = UDim2.new(0.55, 0, 0.7, 0)
 CheckKey.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
 CheckKey.Text = "确认密钥"
 CheckKey.TextSize = 18
-CheckKey.TextColor3 = Color3.fromRGB(150, 150, 150)
+CheckKey.TextColor3 = Color3.fromRGB(41, 255, 0)
 CheckKey.Parent = Frame
 
 local CheckKeyCorner = Instance.new("UICorner")
@@ -92,7 +92,7 @@ GetKey.MouseButton1Click:Connect(function()
 end)
 
 local function validateKey(key)
-    return key == "plm398"
+    return key == "plm398-scty"
 end
 
 CheckKey.MouseButton1Click:Connect(function()
