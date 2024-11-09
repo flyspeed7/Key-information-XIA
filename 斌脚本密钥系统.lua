@@ -103,8 +103,7 @@ CheckKey.MouseButton1Click:Connect(function()
         wait(1)
         ScreenGui:Destroy()
 print("执行冬凌中心")
-        local link = "https://raw.githubusercontent.com/flyspeed7/dong-ling-zhon-xin-DLZX.Lua/refs/heads/main/Main-%E5%86%AC%E5%87%8C%E4%B8%AD%E5%BF%83.Lua"
-loadstring(game:HttpGet(link))()
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/Raw.Dong-Ling-Zhon-Xin.Lua/refs/heads/main/%E6%96%B0%E5%86%AC%E5%87%8C.Lua"))()
     else
         TextBox.PlaceholderText = "key out"
         TextBox.Text = ""
