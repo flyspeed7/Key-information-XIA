@@ -43,7 +43,7 @@ Instructions.Size = UDim2.new(1, 0, 0, 30)
 Instructions.Position = UDim2.new(0, 0, 0.2, 0)
 Instructions.Text = "GUI for 2024.11.9'Day"
 Instructions.TextSize = 13
-Instructions.TextColor3 = Color3.fromRGB(150, 150, 150)
+Instructions.TextColor3 = Color3.fromRGB(255, 255, 0)
 Instructions.BackgroundTransparency = 1
 Instructions.Parent = Frame
 
