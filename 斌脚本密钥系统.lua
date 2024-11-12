@@ -92,7 +92,7 @@ GetKey.MouseButton1Click:Connect(function()
 end)
 
 local function validateKey(key)
-    return key == "plm398-scty"
+    return key == "sxla.png"
 end
 
 CheckKey.MouseButton1Click:Connect(function()
@@ -102,7 +102,7 @@ CheckKey.MouseButton1Click:Connect(function()
         TextBox.Text = ""
         wait(1)
         ScreenGui:Destroy()
-print("执行冬凌中心")
+print("001")
  loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/Raw.Dong-Ling-Zhon-Xin.Lua/refs/heads/main/%E6%96%B0%E5%86%AC%E5%87%8C.Lua"))()
     else
         TextBox.PlaceholderText = "key out"
