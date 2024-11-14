@@ -1,3 +1,6 @@
+--看你妈逼源码呢，我只是懒得加密不是不会加密
+--小学生还看上了，看的你妈死黑逼全家都死了 傻子一个，建议重开
+--不加密是因为方便更新，不掉帧不卡顿加密了，就老实了
 local ScreenGui = Instance.new("ScreenGui")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
@@ -21,7 +24,7 @@ local Close = Instance.new("TextButton")
 Close.Size = UDim2.new(0, 40, 0, 40)
 Close.Position = UDim2.new(1, -40, 0, 0)
 Close.BackgroundTransparency = 1
-Close.Text = "X"
+Close.Text = "K"
 Close.TextScaled = true
 Close.TextColor3 = Color3.fromRGB(255, 0, 0)
 Close.Parent = Frame
@@ -41,7 +44,7 @@ Title.Parent = Frame
 local Instructions = Instance.new("TextLabel")
 Instructions.Size = UDim2.new(1, 0, 0, 30)
 Instructions.Position = UDim2.new(0, 0, 0.2, 0)
-Instructions.Text = "GUI for 2024.11.9'Day"
+Instructions.Text = "New GUI For 2024.11.13'Day"
 Instructions.TextSize = 13
 Instructions.TextColor3 = Color3.fromRGB(255, 255, 0)
 Instructions.BackgroundTransparency = 1
@@ -50,7 +53,7 @@ Instructions.Parent = Frame
 local TextBox = Instance.new("TextBox")
 TextBox.Size = UDim2.new(0.8, 0, 0.2, 0)
 TextBox.Position = UDim2.new(0.1, 0, 0.4, 0)
-TextBox.BackgroundColor3 = Color3.fromRGB(255, 0, 168)
+TextBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 TextBox.PlaceholderText = "输入..."
 TextBox.Text = ""
 TextBox.TextSize = 18
@@ -92,7 +95,7 @@ GetKey.MouseButton1Click:Connect(function()
 end)
 
 local function validateKey(key)
-    return key == "sxla.png"
+    return key == "@XiaoL"
 end
 
 CheckKey.MouseButton1Click:Connect(function()
