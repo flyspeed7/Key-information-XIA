@@ -1,6 +1,6 @@
---看你妈逼源码呢，我只是懒得加密不是不会加密
---小学生还看上了，看的你妈死黑逼全家都死了 傻子一个，建议重开
---不加密是因为方便更新，不掉帧不卡顿加密了，就老实了
+--看你妈逼源码呢，我只是懒得加密不是不会加密•ᴗ•💧
+--小学生还看上了，看的你妈死黑逼全家都死了 傻子一个，建议重开💩
+--不加密是因为方便更新，不掉帧不卡顿加密了，加密就全老实了😂
 local ScreenGui = Instance.new("ScreenGui")
 
 ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
