@@ -11,7 +11,9 @@
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/flyspeed7/Raw.Gong-Gao.Look.Lua/refs/heads/main/N-%E7%A7%8B%E6%9E%AB%E5%85%AC%E5%91%8A%E9%A2%84%E8%A7%88.Lua"))()
 
---这个是新的公告页面～
---爱看源码的死东西赶紧来吧～
---妈的,看个源码把你妈给看死了～
---就想看源码,来来给你看～
+--[[
+这个是新的公告页面～
+爱看源码的死东西赶紧来吧～
+妈的,看个源码把你妈给看死了～
+就想看源码,来来给你看～
+]]
