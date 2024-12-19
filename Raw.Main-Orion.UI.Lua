@@ -14,10 +14,10 @@ local OrionLib = {
                 Default = {
                         Main = Color3.fromRGB(255, 255, 255),
                         Second = Color3.fromRGB(255, 255, 255),
-                        Stroke = Color3.fromRGB(60, 60, 60),
-                        Divider = Color3.fromRGB(60, 60, 60),
-                        Text = Color3.fromRGB(0, 0, 0),
-                        TextDark = Color3.fromRGB(150, 150, 150)
+                        Stroke = Color3.fromRGB(0, 0, 0),
+                        Divider = Color3.fromRGB(0, 0, 0),
+                        Text = Color3.fromRGB(255, 255, 0),
+                        TextDark = Color3.fromRGB(255, 255, 150)
                 }
         },
         SelectedTheme = "Default",
@@ -25,7 +25,6 @@ local OrionLib = {
         SaveCfg = false
 }
 
---Feather Icons https://github.com/evoincorp/lucideblox/tree/master/src/modules/util - Created by 7kayoh
 local Icons = {}
 
 local Success, Response = pcall(function()
@@ -444,6 +443,52 @@ function OrionLib:Init()
         end        
 end        
 
+	local Tabs = {};
+
+	if WindowConfig.SearchBar then
+		local SearchBox = Create("TextBox", {
+			Size = UDim2.new(1, 0, 1, 0),
+			BackgroundTransparency = 1,
+			TextColor3 = Color3.fromRGB(255, 255, 0),
+			PlaceholderColor3 = Color3.fromRGB(255,255,255),
+			PlaceholderText = WindowConfig.SearchBar.Default or "搜索🔍",
+			Font = Enum.Font.GothamBold,
+			TextWrapped = true,
+			Text = '',
+			TextXAlignment = Enum.TextXAlignment.Center,
+			TextSize = 14,
+			ClearTextOnFocus = WindowConfig.SearchBar.ClearTextOnFocus or true
+		})
+
+		local TextboxActual = AddThemeObject(SearchBox, "Text")
+
+		local SearchBar = AddThemeObject(SetChildren(SetProps(MakeElement("RoundFrame", Color3.fromRGB(255, 255, 255), 1, 6), {
+			Parent = WindowStuff,
+			Size = UDim2.new(0, 130, 0, 24),
+			Position = UDim2.new(1.013, -12, 0.075, 0),
+			AnchorPoint = Vector2.new(1, 0.5)
+		}), {
+			AddThemeObject(MakeElement("Stroke"), "Stroke"),
+			TextboxActual
+		}), "Main")
+
+		local function SearchHandle()
+			local Text = string.lower(SearchBox.Text);
+
+			for i,v in pairs(Tabs) do
+				if v:IsA('TextButton') then
+					if string.find(string.lower(i), Text) then
+						v.Visible = true
+					else
+						v.Visible = false
+					end
+				end
+			end
+		end
+
+		AddConnection(TextboxActual:GetPropertyChangedSignal("Text"), SearchHandle);
+	end
+
 function OrionLib:MakeWindow(WindowConfig)
         local FirstTab = true
         local Minimized = false
@@ -459,7 +504,7 @@ function OrionLib:MakeWindow(WindowConfig)
                 WindowConfig.IntroEnabled = true
         end
         WindowConfig.IntroToggleIcon = WindowConfig.IntroToggleIcon or "rbxassetid://8834748103"
-        WindowConfig.IntroText = WindowConfig.IntroText or "🔥🔗Y&F-HUB 密钥引导页面🔗🔥."
+        WindowConfig.IntroText = WindowConfig.IntroText or "您好"..game.Players.LocalPlayer.DisplayName.."."
         WindowConfig.CloseCallback = WindowConfig.CloseCallback or function() end
         WindowConfig.ShowIcon = WindowConfig.ShowIcon or false
         WindowConfig.Icon = WindowConfig.Icon or "rbxassetid://8834748103"
@@ -555,13 +600,13 @@ function OrionLib:MakeWindow(WindowConfig)
                                 AddThemeObject(MakeElement("Stroke"), "Stroke"),
                                 MakeElement("Corner", 1)
                         }),
-                        AddThemeObject(SetProps(MakeElement("Label", "名字:"..game.Players.LocalPlayer.DisplayName.."", WindowConfig.HidePremium and 14 or 13), {
+                        AddThemeObject(SetProps(MakeElement("Label", "名字:"..game.Players.LocalPlayer.DisplayName..".", WindowConfig.HidePremium and 14 or 13), {
                                 Size = UDim2.new(1, -60, 0, 13),
                                 Position = WindowConfig.HidePremium and UDim2.new(0, 50, 0, 19) or UDim2.new(0, 50, 0, 12),
                                 Font = Enum.Font.FredokaOne,
                                 ClipsDescendants = true
                         }), "Text"),
-                        AddThemeObject(SetProps(MakeElement("Label", "Y&F密钥登入", 12), {
+                        AddThemeObject(SetProps(MakeElement("Label", "秋枫免费版.", 12), {
                                 Size = UDim2.new(1, -60, 0, 12),
                                 Position = UDim2.new(0, 50, 1, -25),
                                 Visible = not WindowConfig.HidePremium
